@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        stream-demo-outbound:
+          destination: cloud-stream-demo
+          content-type: application/json
+        stream-demo-inbound:
+          destination: cloud-stream-demo
+          content-type: application/json
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers: localhost:9092
